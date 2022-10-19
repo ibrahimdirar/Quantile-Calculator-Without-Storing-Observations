@@ -1,0 +1,22 @@
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = ["flit_core >=3.2,<4"]
+
+[project]
+name = "p2_quantile"
+version = "0.0.1"
+authors = [
+  { name="Ibrahim Dirar", email="ibrahim@dirar.co.uk" },
+]
+description = "# P2 Algorithm for dynamic calculation of quantiles and histograms without storing observations (https://www.cs.wustl.edu/~jain/papers/ftp/psqr.pdf)"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/ibrahimdirar/Quantile-Calculator-Without-Storing-Observations"
+"Bug Tracker" = "https://github.com/ibrahimdirar/Quantile-Calculator-Without-Storing-Observations/issues"

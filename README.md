@@ -1,6 +1,35 @@
 # P2 Algorithm for dynamic calculation of quantiles and histograms without storing observations
 https://www.cs.wustl.edu/~jain/papers/ftp/psqr.pdf
 
+```python
+
+import pandas as pd
+import seaborn as sns
+from matplotlib import pyplot as plt
+import numpy as np
+from functools import partial
+from p2_quantile import P2Algorithm
+
+def main(iterations, p=0.5, distribution=partial(np.random.normal, size=100), verbose=False):
+    true_medians = []
+    p2_medians = []
+    all_observations = []
+
+    for _ in range(iterations):
+        p2 = P2Algorithm(p)
+        data = distribution()
+        for value in data:
+            p2.observe(value)
+        all_observations += [data]
+        
+
+        true_medians += [np.median(data)]
+        p2_medians += [p2.quantile]
+    
+    return true_medians, p2_medians, all_observations 
+
+```
+
 ## 500 Iterations of P2 Estimator with Data Size 250
 
 ```python
