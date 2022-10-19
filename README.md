@@ -1,7 +1,7 @@
 # P2 Algorithm for dynamic calculation of quantiles and histograms without storing observations
-# https://www.cs.wustl.edu/~jain/papers/ftp/psqr.pdf
+https://www.cs.wustl.edu/~jain/papers/ftp/psqr.pdf
 
-# 500 Iterations of P2 Estimator with Data Size 250
+## 500 Iterations of P2 Estimator with Data Size 250
 
 ```python
 distribution = partial(np.random.normal, loc=0, scale=10, size=250)
